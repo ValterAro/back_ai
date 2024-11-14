@@ -14,7 +14,7 @@ This project is an **AI Directory website** specifically designed for Estonians 
 
 ### Backend
 
-- **Java 19**: The main programming language used for the backend.
+- **Java 17**: The main programming language used for the backend.
 - **Spring Boot**: Provides an efficient and robust framework for creating RESTful APIs and managing dependencies.
 - **Gradle (Groovy)**: Used as the build tool for dependency management and project configuration.
 - **PostgreSQL**: The database for storing AI tool data, user accounts, reviews, and other records.

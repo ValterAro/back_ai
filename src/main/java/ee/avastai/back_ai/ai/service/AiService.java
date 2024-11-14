@@ -1,9 +1,8 @@
-package ee.avastai.back_ai.ai;
+package ee.avastai.back_ai.ai.service;
 
 import ee.avastai.back_ai.ai.dto.AiSiteDto;
 import ee.avastai.back_ai.domain.site.AiSite;
-import ee.avastai.back_ai.domain.site.AiSiteMapper;
-import ee.avastai.back_ai.domain.site.AiSiteService;
+import ee.avastai.back_ai.ai.mapper.AiSiteMapper;
 import jakarta.annotation.Resource;
 import org.springframework.stereotype.Service;
 
@@ -21,5 +20,11 @@ public class AiService {
         List<AiSite> aiSites = aiSiteService.findAllSites();
         return aiSiteMapper.toDtos(aiSites);
 
+    }
+
+    public AiSiteDto getSiteById(int id) {
+        AiSite aiSite = aiSiteService.findSiteById(id)
+                .orElseThrow(() -> new RuntimeException("AI site not found with id: " + id));
+        return aiSiteMapper.toDto(aiSite);
     }
 }

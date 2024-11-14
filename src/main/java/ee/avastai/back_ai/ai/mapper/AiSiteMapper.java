@@ -1,6 +1,7 @@
-package ee.avastai.back_ai.domain.site;
+package ee.avastai.back_ai.ai.mapper;
 
 import ee.avastai.back_ai.ai.dto.AiSiteDto;
+import ee.avastai.back_ai.domain.site.AiSite;
 import org.mapstruct.*;
 
 import java.util.List;

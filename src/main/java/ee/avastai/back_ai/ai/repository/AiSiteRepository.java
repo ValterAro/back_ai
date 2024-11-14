@@ -1,5 +1,6 @@
-package ee.avastai.back_ai.domain.site;
+package ee.avastai.back_ai.ai.repository;
 
+import ee.avastai.back_ai.domain.site.AiSite;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 

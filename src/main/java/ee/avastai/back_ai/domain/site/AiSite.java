@@ -55,6 +55,11 @@ public class AiSite {
     @Column(name = "status", nullable = false, length = 1)
     private String status;
 
+    @Size(max = 10)
+    @NotNull
+    @Column(name = "pricing_type", nullable = false, length = 10)
+    private String pricingType;
+
     @NotNull
     @Column(name = "created_at", nullable = false)
     private Instant createdAt;

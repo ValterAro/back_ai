@@ -1,12 +1,11 @@
 package ee.avastai.back_ai.ai.controller;
 
 import ee.avastai.back_ai.ai.dto.AiSiteDto;
+import ee.avastai.back_ai.ai.dto.NewAiSiteDto;
 import ee.avastai.back_ai.ai.service.AiService;
 import io.swagger.v3.oas.annotations.Operation;
 import jakarta.annotation.Resource;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -20,6 +19,12 @@ public class AiController {
     @GetMapping("/sites")
     @Operation(summary = "Get all sites", description = "Gets all sites from the database")
     public List<AiSiteDto> getAllSites() {return aiService.getAllSites(); }
+
+    @PostMapping("/sites")
+    @Operation(summary = "Add a new AI site", description = "Creates a new AI site entry in the directory")
+    public AiSiteDto createSite(@RequestBody NewAiSiteDto newAiSiteDto) {
+        return aiService.createSite(newAiSiteDto);
+    }
 
     @GetMapping("/sites/{id}")
     @Operation(summary = "Get AI Site by ID", description = "Retrieves a specific AI site by its ID")

@@ -1,6 +1,6 @@
 # AI Directory for Estonians
 
-This project is an **AI Directory website** specifically designed for Estonians to explore, review, and share insights on various AI tools. It aims to foster a community where users can discover new AI tools, provide feedback, share user stories, and contribute to the overall knowledge about AI technology available for Estonian users.
+This project is an **AI Directory website** specifically designed for Estonians to explore, review, and share insights on various AI tools. It aims to foster a community where users can discover new AI tools, provide feedback, share user stories, and contribute to the overall knowledge about AI technology available for Estonian users. It is currently in development and most of the features are yet to come.
 
 ## Features
 

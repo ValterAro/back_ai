@@ -39,6 +39,4 @@ public class AiSiteDto implements Serializable {
     @NotNull
     private final Instant createdAt;
     private final Instant updatedAt;
-    private Integer typeId;
-    private Integer userId;
 }

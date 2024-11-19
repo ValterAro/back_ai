@@ -32,6 +32,12 @@ public class AiController {
         return aiService.getSiteById(id);
     }
 
+    @PutMapping("/sites/{id}")
+    @Operation(summary = "Update AI Site", description = "Updates an existing AI site's information")
+    public AiSiteDto updateSite(@PathVariable int id, @RequestBody NewAiSiteDto newAiSiteDto) {
+        return aiService.updateSite(id, newAiSiteDto);
+    }
+
 
 
 }

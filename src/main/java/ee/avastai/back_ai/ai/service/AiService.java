@@ -61,4 +61,14 @@ public class AiService {
 
         return aiSiteMapper.toDto(savedAiSite);
     }
+
+    public AiSiteDto updateSite(int id, NewAiSiteDto newAiSiteDto) {
+        AiSite existingSite = aiSiteRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Ai site not found with id: " + id));
+
+        aiSiteMapper.partialUpdate(newAiSiteDto, existingSite);
+        existingSite.setUpdatedAt(Instant.now());
+        AiSite updatedSite = aiSiteRepository.save(existingSite);
+        return aiSiteMapper.toDto(updatedSite);
+    }
 }

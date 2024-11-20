@@ -3,6 +3,7 @@ package ee.avastai.back_ai.ai.service;
 import ee.avastai.back_ai.ai.dto.AiSiteDto;
 import ee.avastai.back_ai.ai.dto.NewAiSiteDto;
 import ee.avastai.back_ai.ai.repository.AiSiteRepository;
+import ee.avastai.back_ai.domain.Status;
 import ee.avastai.back_ai.domain.site.AiSite;
 import ee.avastai.back_ai.ai.mapper.AiSiteMapper;
 import ee.avastai.back_ai.domain.type.Type;
@@ -70,5 +71,13 @@ public class AiService {
         existingSite.setUpdatedAt(Instant.now());
         AiSite updatedSite = aiSiteRepository.save(existingSite);
         return aiSiteMapper.toDto(updatedSite);
+    }
+
+    public void deleteSite(int id) {
+        AiSite aiSite = aiSiteRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Ai site not found with id: " + id));
+        aiSite.setStatus(Status.DEACTIVATED);
+        aiSite.setUpdatedAt(Instant.now());
+        aiSiteRepository.save(aiSite);
     }
 }

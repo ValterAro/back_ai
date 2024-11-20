@@ -38,6 +38,12 @@ public class AiController {
         return aiService.updateSite(id, newAiSiteDto);
     }
 
+    @DeleteMapping("/sites/{id}")
+    @Operation(summary = "Delete AI Site", description = "Marks an AI site as DEACTIVATED in the directory. The site is not permanently deleted.")
+    public void deleteSite(@PathVariable int id) {
+        aiService.deleteSite(id);
+    }
+
 
 
 }

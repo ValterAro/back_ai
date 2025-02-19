@@ -1,7 +1,6 @@
-package ee.avastai.back_ai.ai.service;
+package ee.avastai.back_ai.domain.site;
 
 import ee.avastai.back_ai.ai.repository.AiSiteRepository;
-import ee.avastai.back_ai.domain.site.AiSite;
 import jakarta.annotation.Resource;
 import org.springframework.stereotype.Service;
 

@@ -6,6 +6,7 @@ import ee.avastai.back_ai.ai.repository.AiSiteRepository;
 import ee.avastai.back_ai.domain.Status;
 import ee.avastai.back_ai.domain.site.AiSite;
 import ee.avastai.back_ai.ai.mapper.AiSiteMapper;
+import ee.avastai.back_ai.domain.site.AiSiteService;
 import ee.avastai.back_ai.domain.type.Type;
 import ee.avastai.back_ai.domain.user.User;
 import jakarta.annotation.Resource;
